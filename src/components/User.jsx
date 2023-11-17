@@ -1,6 +1,15 @@
 import PropTypes from "prop-types";
 
-const User = ({ user }) => {
+const User = ({ user, deleteUser, changeShowModal, setIsUserToUpdate }) => {
+  const handleClickDelete = () => {
+    deleteUser(user.id);
+  };
+
+  const handleClikcUpdate = () => {
+    changeShowModal();
+    setIsUserToUpdate(user);
+  };
+
   return (
     <article className="w-72 bg-slate-50 p-4 rounded-2xl shadow-2xl">
       <h3 className="text-lg font-bold py-1">
@@ -19,10 +28,16 @@ const User = ({ user }) => {
       </section>
       <hr />
       <div className="py-2 flex justify-end gap-2">
-        <button className="bg-btnTrash hover:bg-red-500 text-white py-1 px-2 rounded-md text-xl">
+        <button
+          onClick={handleClickDelete}
+          className="bg-btnTrash hover:bg-red-500 text-white py-1 px-2 rounded-md text-xl"
+        >
           <i className="bx bx-trash"></i>
         </button>
-        <button className="bg-subTitle hover:bg-gray-400 text-white py-1 px-2 rounded-md text-xl">
+        <button
+          onClick={handleClikcUpdate}
+          className="bg-subTitle hover:bg-gray-400 text-white py-1 px-2 rounded-md text-xl"
+        >
           <i className="bx bx-pencil"></i>
         </button>
       </div>
@@ -32,6 +47,9 @@ const User = ({ user }) => {
 
 User.propTypes = {
   user: PropTypes.object,
+  deleteUser: PropTypes.func,
+  changeShowModal: PropTypes.func,
+  setIsUserToUpdate: PropTypes.func,
 };
 
 export default User;
