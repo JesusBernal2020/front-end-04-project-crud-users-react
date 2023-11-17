@@ -13,7 +13,7 @@ const Header = ({ changeShowModal }) => {
 
       <button
         onClick={handleClickShowModal}
-        className="absolute top-5 left-4 flex gap-2 items-center bg-inherit hover:bg-titleText px-3 bg-blue-500 transition-all duration-300 ease-in-out rounded-md  text-white "
+        className="absolute top-5 left-4 flex gap-2 items-center hover:bg-titleText px-3 bg-blue-500 transition-all duration-300 ease-in-out rounded-md  text-white "
       >
         <span className="text-3xl">
           <i className="bx bxs-user-plus"></i>
