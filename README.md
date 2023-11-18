@@ -37,7 +37,7 @@ The project is completed with core functionalities implemented. Continuous impro
 
 ## Project Access
 
-You can access the deployed project via this [Crud Users](https://weather-app-jbx.netlify.app). Additionally, you have the option to clone the project, install the necessary packages using `npm install`, and run it using `npm run dev`.
+You can access the deployed project via this [Crud Users](https://crud-users-vll.netlify.app). Additionally, you have the option to clone the project, install the necessary packages using `npm install`, and run it using `npm run dev`.
 
 ## Developers
 
